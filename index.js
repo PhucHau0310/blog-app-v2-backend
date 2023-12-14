@@ -38,6 +38,6 @@ app.get('/v1', (req, res) => {
     res.status(200).json('Hello to my app blog');
 });
 
-app.listen(9090, () => {
+app.listen(process.env.PORT || 9090, () => {
     console.log('Server is running ...');
 });
