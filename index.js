@@ -13,24 +13,24 @@ const app = express();
 
 dotenv.config();
 
-// app.use(
-//     cors({
-//         origin: 'http://localhost:3000', // Replace with the actual origin of your frontend
-//         credentials: true,
-//     })
-// );
+app.use(
+    cors({
+        origin: 'http://localhost:3000', // Replace with the actual origin of your frontend
+        // credentials: true,
+    })
+);
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-    res.header('Access-Control-Allow-Credentials', true);
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    if (req.method === 'OPTIONS') {
-        res.sendStatus(204);
-    } else {
-        next();
-    }
-});
+// app.use((req, res, next) => {
+//     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+//     res.header('Access-Control-Allow-Credentials', true);
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+//     if (req.method === 'OPTIONS') {
+//         res.sendStatus(204);
+//     } else {
+//         next();
+//     }
+// });
 // app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
