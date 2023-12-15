@@ -15,7 +15,8 @@ dotenv.config();
 
 app.use(
     cors({
-        origin: 'http://localhost:3000', // Replace with the actual origin of your frontend
+        // origin: 'http://localhost:3000', // Replace with the actual origin of your frontend
+        origin: 'https://blog-app-v2-frontend.vercel.app',
         credentials: true,
     })
 );
