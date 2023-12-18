@@ -10,7 +10,7 @@ router.post(
 
 router.delete(
     '/delete/:commentId',
-    middlewareController.verifyTokenAndAdminAuth,
+    middlewareController.verifyToken,
     commentController.deleteComment
 );
 module.exports = router;
