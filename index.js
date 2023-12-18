@@ -8,6 +8,7 @@ const authRoute = require('./Routes/auth');
 const postRoute = require('./Routes/post');
 const avaRoute = require('./Routes/avatar');
 const userRoute = require('./Routes/user');
+const commentRoute = require('./Routes/comment');
 
 const app = express();
 
@@ -45,7 +46,7 @@ connectDB();
 app.use('/v1/auth', authRoute);
 app.use('/v1/post', postRoute);
 app.use('/v1/ava', avaRoute);
-app.use('/v1/user', userRoute);
+app.use('/v1/comment', commentRoute);
 
 app.get('/v1', (req, res) => {
     res.status(200).json('Hello to my app blog');
